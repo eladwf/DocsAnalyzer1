@@ -22,7 +22,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="SqlHandler.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DocsAnalyzer.py" />
+    <Compile Include="rtfobj.py" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
