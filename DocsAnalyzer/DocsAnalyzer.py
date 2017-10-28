@@ -12,7 +12,7 @@ def main():
     rtfp = rtfobj.RtfParser(data)
     rtfp.parse()
     #parser checks all relevant cwords by sending parameters to server and checking if they are in the normal range
-    #return alert if "suspicious" cword found, else ok
+    #return alert if "suspicious" cword found, else ok 
 
 
 if __name__ == "__main__":
