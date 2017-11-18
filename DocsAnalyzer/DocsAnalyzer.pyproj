@@ -22,7 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="SqlHandler.py">
+    <Compile Include="sql.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DocsAnalyzer.py" />

@@ -390,6 +390,13 @@ class RtfParser(object):
                     #need to post to sql
                     if(cword in objarr):
                         d=3 #for debbuging purpose, cword is object related 
+                    if cword==b"objname":
+                        d=1
+                    test=data_cropped
+                    test=test.decode()
+                    cws=cword
+                    cw="%s "%(cws.decode())
+                    f=find_between(test,cw,"}")
                     param = None
                     if len(m.groups()) > 1:
                         param = m.group(2)
@@ -536,6 +543,20 @@ class RtfParser(object):
 
     def end_of_file(self):
         pass
+def find_between_r( s, first, last ):
+    try:
+        start = s.rindex( first ) + len( first )
+        end = s.rindex( last, start )
+        return s[start:end]
+    except ValueError:
+        return ""
+def find_between( s, first, last ):
+    try:
+        start = s.index( first ) + len( first )
+        end = s.index( last, start )
+        return s[start:end]
+    except ValueError:
+        return ""
 
 
 class RtfObject(object):
